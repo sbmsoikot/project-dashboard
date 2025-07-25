@@ -9,8 +9,6 @@ interface TopbarProps {
 }
 
 export default function Topbar({ 
-  sidebarCollapsed, 
-  onToggleSidebar, 
   username, 
   role, 
   onLogout 

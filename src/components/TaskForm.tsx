@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type { Task } from "../types";
 
 const STATUS_OPTIONS = [

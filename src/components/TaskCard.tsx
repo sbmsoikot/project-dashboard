@@ -237,18 +237,7 @@ export default function TaskCard({ task, role = "guest", onUpdate }: TaskCardPro
               </div>
 
               {/* Quantities */}
-              <div className="grid grid-cols-4 gap-2">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Planned Qty</label>
-                  <input
-                    name="plan_quantity"
-                    type="number"
-                    value={editData.plan_quantity}
-                    onChange={handleChange}
-                    className="w-full p-2 border rounded"
-                    min="0"
-                  />
-                </div>
+              <div className="grid grid-cols-3 gap-2">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Total Job</label>
                   <input
@@ -319,11 +308,7 @@ export default function TaskCard({ task, role = "guest", onUpdate }: TaskCardPro
               </div>
 
               {/* Progress Info */}
-              <div className="mt-4 grid grid-cols-6 gap-4 text-sm">
-                <div className="text-center">
-                  <div className="font-semibold text-gray-800">{task.plan_quantity}</div>
-                  <div className="text-gray-600">Planned</div>
-                </div>
+              <div className="mt-4 grid grid-cols-5 gap-4 text-sm">
                 <div className="text-center">
                   <div className="font-semibold text-blue-600">{task.total_job}</div>
                   <div className="text-gray-600">Total Job</div>

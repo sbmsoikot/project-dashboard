@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_ENDPOINTS } from "../config/api";
 
 interface LoginFormProps {
   onLogin: (token: string, username: string, role: "admin" | "guest") => void;
@@ -16,7 +17,7 @@ export default function LoginForm({ onLogin, error }: LoginFormProps) {
     setLoading(true);
     setFormError(null);
     try {
-      const res = await fetch("/api/token", {
+      const res = await fetch(API_ENDPOINTS.AUTH, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
@@ -32,7 +33,7 @@ export default function LoginForm({ onLogin, error }: LoginFormProps) {
       const data = await res.json();
       
       // Fetch user details to get role
-      const userRes = await fetch("/api/users/me/", {
+      const userRes = await fetch(API_ENDPOINTS.USERS + "/me/", {
         headers: { Authorization: `Bearer ${data.access_token}` }
       });
       

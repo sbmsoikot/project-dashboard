@@ -1,6 +1,7 @@
 import type { Manpower } from "../types";
+import { API_ENDPOINTS } from "../config/api";
 
-const API_BASE = "/api/manpower";
+const API_BASE = API_ENDPOINTS.MANPOWER;
 
 type HeadersArg = { [key: string]: string };
 

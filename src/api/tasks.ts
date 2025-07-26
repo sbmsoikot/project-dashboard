@@ -1,6 +1,7 @@
 import type { Task } from "../types";
+import { API_ENDPOINTS } from "../config/api";
 
-const API_BASE = "/api/tasks";
+const API_BASE = API_ENDPOINTS.TASKS;
 
 type HeadersArg = { [key: string]: string };
 

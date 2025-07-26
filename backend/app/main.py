@@ -19,7 +19,12 @@ api_router = APIRouter()
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],  # React dev server
+    allow_origins=[
+        "http://localhost:5173", 
+        "http://localhost:3000",  # React dev server
+        "https://homepark.nittosolutions.com",  # Production domain
+        "https://frontend-production-827f.up.railway.app"  # Railway frontend URL
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

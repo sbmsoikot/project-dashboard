@@ -22,7 +22,9 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173", 
         "http://localhost:3000",  # React dev server
-        "https://homepark.nittosolutions.com",  # Production domain
+        "http://homepark.nittosolutions.com",  # Production domain
+        "https://homepark.nittosolutions.com",
+        "https://backend-production-827f.up.railway.app"  # Production domain
         "https://frontend-production-827f.up.railway.app"  # Railway frontend URL
     ],
     allow_credentials=True,
